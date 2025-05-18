@@ -35,8 +35,11 @@
                 <p class="title-sub">お問い合わせ</p>
             </h1>
         </div>
-        
         <div class="form-box">
+            <div class="form-buttons">
+                <button onclick="showForm('personal')">一般の方はこちら</button>
+                <button onclick="showForm('corporate')">法人の方はこちら</button>
+            </div>
             <form id="form-persoal">
                 <label>
                     <p class="contact-form">お名前</p>
@@ -181,12 +184,12 @@
                 <label>
                     <p class="contact-form">メールアドレス</p>
                     <p class="check">*</p>
-                    <input name="mail" type="text" placeholder="Your Mail Address" title="このフィールドに入力してください。">
+                    <input name="mail" type="text" title="このフィールドに入力してください。">
                 </label>
                 <label>
                     <p class="contact-form">メールアドレス(確認用)</p>
                     <p class="check">*</p>
-                    <input name="mail" type="text" placeholder="Email Address" title="このフィールドに入力してください。">
+                    <input name="mail" type="text" title="このフィールドに入力してください。">
                 <label>
                     <p class="contact-form">ご要望等(メッセージ)</p>
                     <p class="check">*</p>

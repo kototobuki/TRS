@@ -1,7 +1,8 @@
 /*index.html*/
 .mainpage-top {
     opacity: 0;
-    animation:  fadeIn 3s ease 1s forwards;
+    animation:  fadeIn 3s ease 1s forwards; /*フェードイン*/
+    
 }
  @keyframes fadeIn {
     from {
@@ -41,11 +42,13 @@ nav {
     padding: 0px;
     margin-right: 60px;
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
 header a {
     text-decoration: none;
+    font-size: 20px;
     color: black;
+    font-family: 'Frank Ruhl Libre', serif;
  }
  /*横画面用*/
 @media (min-width: 600px) {

@@ -1,9 +1,11 @@
- /*共通*/
+ /*
+ 共通
+ */
  body{
     margin: 0 auto;
     padding: 0;
     height: 100%;
-    width: 1920px;
+    width: 100%;
 }
  /*header*/
  header {
@@ -47,10 +49,11 @@ index.html
     align-items: center;
     background: linear-gradient(to right,#969495, #d8d8d8);
     height: 1000px;
-    width: 1920px;
+    width: 100%;
     margin: 0px;
     opacity: 0;
     animation:  fadeIn 3s ease 1s forwards; /*フェードイン*/
+    z-index: 0;
 }
  @keyframes fadeIn {
     from {
@@ -68,14 +71,19 @@ index.html
     right: 0px;
     height:750px;
     width: 55%;
-    z-index: 0;
+    z-index: 1;
 }
 .trs-img{
+    padding: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 9999;
+    z-index: 2;
+}
+.button {
+    padding: 500px 0px 0px 0px;
+    z-index: 2;
 }
 .about {
     position: relative;
@@ -86,7 +94,7 @@ index.html
  /*contact.html*/
  /*privacy-policy.html*/
 .contact-img {
-    width: 100%;
+    width: 55%;
 }
  /*縦画面用*/
 

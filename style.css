@@ -1,46 +1,33 @@
-/*index.html*/
-.mainpage-top {
-    opacity: 0;
-    animation:  fadeIn 3s ease 1s forwards; /*フェードイン*/
-    
-}
- @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
- }
- 
- /*business.html*/
- /*company.html*/
- /*contact.html*/
- /*privacy-policy.html*/
  /*共通*/
-
- /*縦画面用*/
+ body{
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    width: 1920px;
+}
  /*header*/
  header {
-    display: flex;
     justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    display: flex;
     align-items: center;
     padding: 10px 20px;
     background-color: transparent;
     flex-direction: column;
+    z-index: 1;
  }
- /*ロゴのサイズと配置*/
- header .logo {
+ header .logo-img {  /*ロゴのサイズと配置*/
     height: 50px;
     width: auto;
     display: block;
     margin-left: 50px;
   }
-/*リストのスタイル*/
-nav {
+nav ul {   /*リストのスタイル*/
     list-style: none;
     padding: 0px;
-    margin-right: 60px;
+    margin-right: 100px;
     display: flex;
     gap: 40px;
 }
@@ -50,6 +37,59 @@ header a {
     color: black;
     font-family: 'Frank Ruhl Libre', serif;
  }
+/*
+index.html
+*/
+.trs-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right,#969495, #d8d8d8);
+    height: 1000px;
+    width: 1920px;
+    margin: 0px;
+    opacity: 0;
+    animation:  fadeIn 3s ease 1s forwards; /*フェードイン*/
+}
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.top-img {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 0px;
+    right: 0px;
+    height:750px;
+    width: 55%;
+    z-index: 0;
+}
+.trs-img{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9999;
+}
+.about {
+    position: relative;
+
+}
+ /*business.html*/
+ /*company.html*/
+ /*contact.html*/
+ /*privacy-policy.html*/
+.contact-img {
+    width: 100%;
+}
+ /*縦画面用*/
+
  /*横画面用*/
 @media (min-width: 600px) {
     header {

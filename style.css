@@ -1,28 +1,29 @@
  /*
  共通
  */
- body{
+ body {
     margin: 0 auto;
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Frank Ruhl Libre', serif;
 }
  /*header*/
  header {
     justify-content: space-between;
-    height: 80px;
     width: 100%;
+    height: 80px;
     position: fixed;
     display: flex;
     align-items: center;
     padding: 10px 20px;
     background-color: transparent;
     flex-direction: column;
-    z-index: 1;
+    z-index: 5;
  }
- header .logo-img {  /*ロゴのサイズと配置*/
-    height: 50px;
+ .logo-img {  /*ロゴのサイズと配置*/
     width: auto;
+    height: 50px;
     display: block;
     margin-left: 50px;
   }
@@ -36,20 +37,16 @@ nav ul {   /*リストのスタイル*/
 header a {
     text-decoration: none;
     font-size: 20px;
-    color: black;
-    font-family: 'Frank Ruhl Libre', serif;
+    color: #333;
  }
+
 /*
 index.html
 */
 .trs-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background: linear-gradient(to right,#969495, #d8d8d8);
-    height: 1000px;
     width: 100%;
+    height: 950px;
     margin: 0px;
     opacity: 0;
     animation:  fadeIn 3s ease 1s forwards; /*フェードイン*/
@@ -63,7 +60,14 @@ index.html
         opacity: 1;
     }
 }
-.top-img {
+.trs-contenttop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-img {  /*背景画像*/
     position: absolute;
     display: flex;
     justify-content: flex-end;
@@ -73,22 +77,62 @@ index.html
     width: 55%;
     z-index: 1;
 }
-.trs-img{
-    padding: 20px;
-    position: relative;
+
+.trs {
+    position: absolute;
+    margin-top: 250px;
+    left: 45%;
+    transform: translateX(-120px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 20px;
     z-index: 2;
 }
-.button {
-    padding: 500px 0px 0px 0px;
-    z-index: 2;
+.trust-img {
+    width :200px;
+    height :auto;
 }
+.responsibility-img {
+    width :550px;
+    height :auto;
+}
+.service-img {
+    width :300px;
+    height :auto;
+}
+.btn-frame {    /*ボタン作成*/
+    margin: 800px 0px 50px 150px;
+    width: 590px;
+    height: 100px;
+    padding: 10px 30px;
+    background-color: #333;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.btn-text {
+
+}
+.btn-link{
+    text-decoration: none;
+    color: #ffffff;
+}
+.arrow {
+
+}
+
 .about {
     position: relative;
 
 }
+
+
+
+
  /*business.html*/
  /*company.html*/
  /*contact.html*/

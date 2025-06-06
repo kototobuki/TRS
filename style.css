@@ -8,6 +8,12 @@
     width: 100%;
     font-family: 'Frank Ruhl Libre', serif;
 }
+
+/*Contactフォーム誘導*/
+.contact-img {
+    width: 55%;
+}
+ /*縦画面用*/
  /*header*/
  header {
     justify-content: space-between;
@@ -21,13 +27,15 @@
     flex-direction: column;
     z-index: 5;
  }
- .logo-img {  /*ロゴのサイズと配置*/
+ /*ロゴのサイズと配置*/
+ .logo-img {  
     width: auto;
     height: 50px;
     display: block;
     margin-left: 50px;
   }
-nav ul {   /*リストのスタイル*/
+/*リストのスタイル*/  
+nav ul {   
     list-style: none;
     padding: 0px;
     margin-right: 100px;
@@ -66,8 +74,8 @@ index.html
     flex-direction: column;
     align-items: center;
 }
-
-.top-img {  /*背景画像*/
+/*背景画像*/
+.top-img {  
     position: absolute;
     display: flex;
     justify-content: flex-end;
@@ -100,7 +108,8 @@ index.html
     width :300px;
     height :auto;
 }
-.btn-frame {    /*ボタン作成*/
+/*ボタン作成*/
+.btn-frame {    
     margin: 800px 0px 50px 150px;
     width: 590px;
     height: 100px;
@@ -114,33 +123,101 @@ index.html
     justify-content: space-between;
     
 }
-.btn-text {
+/*.btn-text {
 
-}
+}*/
 .btn-link{
     text-decoration: none;
     color: #ffffff;
 }
-.arrow {
+/*.arrow {
+
+}*/
+
+/*aboutタグ内の装飾*/
+.about  {
+    display: flex;
+    justify-content: center;
+    margin: 150px auto;
+    width: 85%;
+    max-width: 100%;
+}
+.building-img {
+    width: 500px;
+    height: auto;
+    max-width: 100%;
+}
+.about div {
+    margin: 0px 20px 0px 50px;
+}
+/*
+.about-img {
 
 }
-
-.about {
-    position: relative;
+.about-description {
 
 }
+*/
 
-
-
-
- /*business.html*/
- /*company.html*/
- /*contact.html*/
- /*privacy-policy.html*/
-.contact-img {
-    width: 55%;
+/*画像3つ並び*/
+.trs-band {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    z-index: 0;
 }
- /*縦画面用*/
+
+.box {
+    background-color: #000;
+    position :relative;
+    width: calc(100%/3);
+    height: auto;
+}
+
+.band-img {
+    opacity: 0.3;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+}
+
+.box-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+
+}
+/*下部*/
+
+
+
+ /*
+ business.html
+ */
+
+ /*
+ company.html
+ */
+
+ /*
+ contact.html
+ */
+
+ /*
+ privacy-policy.html
+ */
+
+
 
  /*横画面用*/
 @media (min-width: 600px) {

@@ -10,7 +10,43 @@ body {
     font-family: "Noto Serif JP", serif;
 }
 
-/*Contactフォーム誘導*/
+ /*縦画面用*/
+ /*header*/
+ header {
+    font-family: "Frank Ruhl Libre", serif;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    flex-direction: column;
+    z-index: 5;
+ }
+ /*ロゴのサイズと配置*/
+ .logo-img {  
+    width: auto;
+    height: 50px;
+    display: block;
+    margin-left: 50px;
+  }
+/*リストのスタイル*/  
+nav ul {   
+    list-style: none;
+    padding: 0px;
+    margin-right: 100px;
+    display: flex;
+    gap: 40px;
+}
+header a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+ }
+
+ /*Contactフォーム誘導*/
 .contact-section {
     position: relative;
     background-color: #000;
@@ -64,49 +100,13 @@ button {
     white-space: nowrap;
 }
 
- /*縦画面用*/
- /*header*/
- header {
-    font-family: "Frank Ruhl Libre", serif;
-    justify-content: space-between;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: transparent;
-    flex-direction: column;
-    z-index: 5;
- }
- /*ロゴのサイズと配置*/
- .logo-img {  
-    width: auto;
-    height: 50px;
-    display: block;
-    margin-left: 50px;
-  }
-/*リストのスタイル*/  
-nav ul {   
-    list-style: none;
-    padding: 0px;
-    margin-right: 100px;
-    display: flex;
-    gap: 40px;
-}
-header a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #333;
- }
-
 /*
 index.html
 */
-.trs-content {
+.trs-headline {
     background: linear-gradient(to right,#969495, #d8d8d8);
     width: 100%;
-    height: 950px;
+    height: auto;
     margin: 0px;
     opacity: 0;
     animation:  fadeIn 3s ease 1s forwards; /*フェードイン*/
@@ -120,7 +120,7 @@ index.html
         opacity: 1;
     }
 }
-.trs-contenttop {
+.trs-img {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -161,6 +161,11 @@ index.html
     height :auto;
 }
 /*ボタン作成*/  
+.btn-frame{
+    width: 100%;
+    height: 150px;
+}
+
 .btn-link{
     margin: 800px 0px 50px 150px;
     text-decoration: none;
@@ -308,6 +313,13 @@ index.html
  /*
  contact.html
  */
+
+
+
+
+
+
+
 
  /*
  privacy-policy.html

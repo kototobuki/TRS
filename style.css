@@ -1,3 +1,4 @@
+ @charset "UTF-8";
  /*
  共通
  */
@@ -6,7 +7,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Frank Ruhl Libre', serif;
+    font-family: "Noto Serif JP", serif;
 }
 
 /*Contactフォーム誘導*/
@@ -35,6 +36,7 @@ body {
 
 }
 .contact-title {
+    font-family: "Frank Ruhl Libre", serif;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -65,6 +67,7 @@ button {
  /*縦画面用*/
  /*header*/
  header {
+    font-family: "Frank Ruhl Libre", serif;
     justify-content: space-between;
     width: 100%;
     height: 80px;
@@ -157,31 +160,43 @@ index.html
     width :300px;
     height :auto;
 }
-/*ボタン作成*/
-.btn-frame {    
+/*ボタン作成*/  
+.btn-link{
     margin: 800px 0px 50px 150px;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(to right,#969495, #d8d8d8);
     width: 590px;
     height: 100px;
-    padding: 10px 30px;
-    background-color: #333;
-    font-size: 16px;
-    border-radius: 5px;
-    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    cursor: pointer;
+    border: 1px solid#ffffff;
+    border-radius: 0px 50px 50px 50px;
+    z-index: 2;
 }
-/*.btn-text {
-
-}*/
-.btn-link{
-    text-decoration: none;
-    color: #ffffff;
+.btn-link:hover {
+    background: #333 ;
 }
-/*.arrow {
 
-}*/
+.btn-text1 {
+    margin-left: 200px;
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+.btn-text2 {
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid#ffffff;
+    border-radius: 50%;
+}
+
+
 
 /*aboutタグ内の装飾*/
 .about  {
@@ -251,8 +266,12 @@ index.html
     font-weight: 400;
     line-height: 1.4;
     text-align: center;
-
 }
+
+.box-font {
+    font-family: "Frank Ruhl Libre", serif;
+}
+
 /*下部*/
 .summary {
     margin: 150px 0px;
@@ -298,6 +317,7 @@ index.html
  footer
  */
 footer {
+    font-family: "Frank Ruhl Libre", serif;
     background-color: #969495;
     display: flex;
     align-items: center;
@@ -307,7 +327,7 @@ footer {
     width: 100%;
     height: auto;
 
-}z
+}
 footer img {
     width: auto;
     height: 80px;

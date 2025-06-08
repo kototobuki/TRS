@@ -321,7 +321,7 @@ index.html
  }
 
  .trs-content img {
-    width: 1920px;
+    width: 100%;
     height: 400px;
     max-width: 100%;
     object-fit: cover;
@@ -360,6 +360,7 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: auto;
 }
 .form-buttons2 {
     display: flex;
@@ -376,10 +377,93 @@ h1 {
     white-space: nowrap;
 }
 
+/*一般用フォーム*/
+
+#form-personal {
+    margin: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+}
+
+label {
+    width: 85%;
+    height: auto;
+    margin-bottom: 5px;
+}
+.label-name {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.contact-form {
+    font-size: 16px;    
+}
+
+.check {
+    color: #f23a3c;
+    font-size: 16px;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+}
+
+/* option {
+
+} */
 
 
+select {
+    width: 500px;
+    height: 50px;
+}
+.privacy-policy {
+    margin:  0px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
 
+.privacy-policy input{
+    width: 10px;
+    height: 10px;
+}
 
+.send {
+    background-color: #333;
+    width: 50%;
+}
+
+/*法人用フォーム*/
+#form-corporate {
+    margin: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    display: none;
+}
+
+.privacy-policy {
+    margin:  0px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
 
  /*
  privacy-policy.html
@@ -416,7 +500,6 @@ footer a {
     font-size: 20px;
     color: #ffffff;
  }
-
 
  /*横画面用*/
 @media (min-width: 600px) {

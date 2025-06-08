@@ -40,23 +40,29 @@
         </div>
         <div class="form-box">
             <div class="form-buttons2">
-                <button onclick="showForm('personal')">一般の方はこちら</button>
-                <button onclick="showForm('corporate')">法人の方はこちら</button>
+                <button type="button" onclick="showForm('personal')">一般の方はこちら</button>
+                <button type="button" onclick="showForm('corporate')">法人の方はこちら</button>
             </div>
             <form id="form-personal">
                 <label>
-                    <p class="contact-form">お名前</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">お名前</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="name" type="text" placeholder="山田 太郎" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">フリガナ</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">フリガナ</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="name2" type="text" placeholder="ヤマダ タロウ" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">年齢</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">年齢</p>
+                        <p class="check">*</p>
+                    </div>
                     <select name="age" type="text" title="一覧の中の項目を選んでください。">
                         <option value="">-</option>
                         <option value="18">18</option>
@@ -141,71 +147,94 @@
                         <option value="97">97</option>
                         <option value="98">98</option>
                         <option value="99">99</option>
+                    </select>
                 </label>
                 <label>
-                    <p class="contact-form">メールアドレス</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">メールアドレス</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="mail" type="text" placeholder="Your Mail Address" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">メールアドレス(確認用)</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">メールアドレス(確認用)</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="mail" type="text" placeholder="Email Address" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">電話番号</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">電話番号</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="TEL" type="text" placeholder="000-0000-0000" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">ご要望等(メッセージ)</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">ご要望等(メッセージ)</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="message" type="text" placeholder="メッセージをご入力ください" title="このフィールドに入力してください。">
                 </label>
                 <label class="privacy-policy">
                     <p class="contact-form">I agree to the Privacy Policy.</p>
-                    <input name="mail" type="checkbox" title="続行する場合は、このチェックボックスをオンにしてください">
+                    <input name="agree" type="checkbox" title="続行する場合は、このチェックボックスをオンにしてください">
                 </label>
-                <button class="send">Send</button>
+                <button class="send">送信</button>
             </form>
             <form id="form-corporate">
                 <label>
-                    <p class="contact-form">企業名</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">企業名</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="Conpany-name" type="text" placeholder="株式会社TRS" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">代表者名</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">代表者名</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="name" type="text" placeholder="山田 太郎" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">フリガナ</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">フリガナ</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="name2" type="text" placeholder="ヤマダ タロウ" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">メールアドレス</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">メールアドレス</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="mail" type="text" title="このフィールドに入力してください。">
                 </label>
                 <label>
-                    <p class="contact-form">メールアドレス(確認用)</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">メールアドレス(確認用)</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="mail" type="text" title="このフィールドに入力してください。">
+                </label>
                 <label>
-                    <p class="contact-form">ご要望等(メッセージ)</p>
-                    <p class="check">*</p>
+                    <div class="label-name">
+                        <p class="contact-form">ご要望等(メッセージ)</p>
+                        <p class="check">*</p>
+                    </div>
                     <input name="message" type="text" placeholder="メッセージをご入力ください" title="このフィールドに入力してください。">
                 </label>
                 <label class="privacy-policy">
                     <p class="contact-form">I agree to the Privacy Policy.</p>
                     <input name="mail" type="checkbox" title="続行する場合は、このチェックボックスをオンにしてください">
                 </label>
-                <button class="Send">Send</button>
+                <button class="send">送信</button>
             </form>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 <footer>
     <img src="images/trs_white.webp">

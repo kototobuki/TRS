@@ -89,7 +89,8 @@ header a {
     white-space: nowrap;
 }
 
-.form-buttons {
+/*問い合わせ用のボタン*/
+.form-buttons1 {
     display: flex;
     gap: 80px;
 }
@@ -314,23 +315,65 @@ index.html
  /*
  contact.html
  */
+ /*ページ上部のスタイル*/
  .trs-content {
     margin-top: 120px;
  }
 
  .trs-content img {
-    width: 100%;
+    width: 1920px;
     height: 400px;
+    max-width: 100%;
+    object-fit: cover;
  }
 
-.dinner-top{
+.inner-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+h1 {
+    margin: 30px;
 }
 .text-title{
-
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: 60px;
 }
-.title-sub{
 
+.title-sub{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/*ボタン配置*/
+.form-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-buttons2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    
+}
+.form-buttons2 button {
+    color: #333;
+    border: 2px solid #333;
+    padding: 20px 50px;
+    margin-top: 10px;
+    white-space: nowrap;
 }
 
 

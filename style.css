@@ -191,20 +191,28 @@ index.html
     width: 85%;
     max-width: 100%;
 }
+
 .building-img {
     width: 500px;
     height: auto;
     max-width: 100%;
 }
+
 .about div {
-    margin: 0px 20px 0px 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .about-img {
-
+    width: 160px;
+    height: auto;
 }
 .about-description {
-
+    margin-top: 30px;
+    line-height: 1.8;
+    white-space: nowrap;
 }
 
 /*画像3つ並び*/

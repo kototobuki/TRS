@@ -102,6 +102,11 @@ button {
     white-space: nowrap;
 }
 
+button:hover {
+    background-color: #d8d8d8;
+    color: #333;
+}
+
 /*
 index.html
 */
@@ -189,6 +194,7 @@ index.html
 
 .btn-text1 {
     margin-left: 200px;
+    font-size: 24px;
     font-family: "Frank Ruhl Libre", serif;
 }
 
@@ -233,6 +239,7 @@ index.html
 }
 .about-description {
     margin-top: 30px;
+    font-size: 24px;
     line-height: 1.8;
     white-space: nowrap;
 }
@@ -269,7 +276,7 @@ index.html
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 400;
     line-height: 1.4;
     text-align: center;
@@ -362,21 +369,31 @@ h1 {
     flex-direction: column;
     height: auto;
 }
-.form-buttons2 {
+.form-buttons {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 75%;
     
 }
-.form-buttons2 button {
+.form-buttons button {
+    width: 35%;
     color: #333;
+    font-size: 18px;
     border: 2px solid #333;
     padding: 20px 50px;
     margin-top: 10px;
-    white-space: nowrap;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+
 }
 
+.form-buttons button:hover {
+    background-color: #333;
+    color: #d8d8d8;
+}
 /*一般用フォーム*/
 
 #form-personal {
@@ -414,6 +431,19 @@ input {
     font-size: 15px;
     width: 100%;
     height: 50px;
+    padding: 10px;
+}
+
+textarea {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    width: 100%;
+    height: 160px;
+    line-height: 1.4;
+    overflow-y: hidden;
+    padding: 10px;
+    resize: none;
 }
 
 /* option {
@@ -441,7 +471,8 @@ select {
 
 .send {
     background-color: #333;
-    width: 50%;
+    width: 377px;
+    height: 60px;
 }
 
 /*法人用フォーム*/
@@ -468,6 +499,7 @@ select {
  /*
  privacy-policy.html
  */
+
 
  /*
  footer

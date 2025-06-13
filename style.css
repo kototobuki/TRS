@@ -1,0 +1,541 @@
+ @charset "UTF-8";
+ /*
+ 共通
+ */
+body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Noto Serif JP", serif;
+}
+
+ /*縦画面用*/
+ /*header*/
+ header {
+    font-family: "Frank Ruhl Libre", serif;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    flex-direction: column;
+    z-index: 5;
+ }
+ /*ロゴのサイズと配置*/
+ .logo-img {  
+    width: auto;
+    height: 50px;
+    display: block;
+    margin-left: 50px;
+  }
+/*リストのスタイル*/  
+nav ul {   
+    list-style: none;
+    padding: 0px;
+    margin-right: 100px;
+    display: flex;
+    gap: 40px;
+}
+header a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+ }
+
+ /*Contactフォーム誘導*/
+.contact-section {
+    position: relative;
+    background-color: #000;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.contact-img  {
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+}
+
+.contact-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+
+}
+.contact-title {
+    font-family: "Frank Ruhl Libre", serif;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.contact-discription {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+/*問い合わせ用のボタン*/
+.form-buttons1 {
+    display: flex;
+    gap: 80px;
+}
+button {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 20px 50px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: #d8d8d8;
+    color: #333;
+}
+
+/*
+index.html
+*/
+.trs-headline {
+    background: linear-gradient(to right,#969495, #d8d8d8);
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    opacity: 0;
+    animation:  fadeIn 3s ease 1s forwards; /*フェードイン*/
+    z-index: 0;
+}
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.trs-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*背景画像*/
+.top-img {  
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 0px;
+    right: 0px;
+    height:750px;
+    width: 55%;
+    z-index: 1;
+}
+
+.trs {
+    position: absolute;
+    margin-top: 250px;
+    left: 45%;
+    transform: translateX(-120px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+}
+.trust-img {
+    width :200px;
+    height :auto;
+}
+.responsibility-img {
+    width :550px;
+    height :auto;
+}
+.service-img {
+    width :300px;
+    height :auto;
+}
+/*ボタン作成*/  
+.btn-frame{
+    width: 100%;
+    height: 150px;
+}
+
+.btn-link{
+    margin: 800px 0px 50px 150px;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(to right,#969495, #d8d8d8);
+    width: 590px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid#ffffff;
+    border-radius: 0px 50px 50px 50px;
+    z-index: 2;
+}
+.btn-link:hover {
+    background: #333 ;
+}
+
+.btn-text1 {
+    margin-left: 200px;
+    font-size: 24px;
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+.btn-text2 {
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid#ffffff;
+    border-radius: 50%;
+}
+
+
+
+/*aboutタグ内の装飾*/
+.about  {
+    display: flex;
+    justify-content: center;
+    margin: 150px auto;
+    width: 85%;
+    max-width: 100%;
+}
+
+.building-img {
+    width: 500px;
+    height: auto;
+    max-width: 100%;
+}
+
+.about div {
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-img {
+    width: 160px;
+    height: auto;
+}
+.about-description {
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 1.8;
+    white-space: nowrap;
+}
+
+/*画像3つ並び*/
+.trs-band {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    z-index: 0;
+}
+
+.box {
+    background-color: #000;
+    position :relative;
+    width: calc(100%/3);
+    height: auto;
+}
+
+.band-img {
+    opacity: 0.3;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+}
+
+.box-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.box-font {
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+/*下部*/
+.summary {
+    margin: 150px 0px;
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: center;
+    margin: 150px auto;
+    width: 85%;
+    max-width: 85%;
+}
+.lifestyle-img {
+    width: 400px;
+    height: 400px;
+}
+.summary-text {
+    margin-right: 30px;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 24px;
+    line-height: 1.8;
+    white-space: nowrap;
+}
+
+
+
+ /*
+ business.html
+ */
+
+ /*
+ company.html
+ */
+
+ /*
+ contact.html
+ */
+ /*ページ上部のスタイル*/
+ .trs-content {
+    margin-top: 120px;
+ }
+
+ .trs-content img {
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+ }
+
+.inner-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 30px;
+}
+.text-title{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: 60px;
+}
+
+.title-sub{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/*ボタン配置*/
+.form-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+}
+.form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    
+}
+.form-buttons button {
+    width: 35%;
+    color: #333;
+    font-size: 18px;
+    border: 2px solid #333;
+    padding: 20px 50px;
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+
+}
+
+.form-buttons button:hover {
+    background-color: #333;
+    color: #d8d8d8;
+}
+/*一般用フォーム*/
+
+#form-personal {
+    margin: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+}
+
+label {
+    width: 85%;
+    height: auto;
+    margin-bottom: 5px;
+}
+.label-name {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.contact-form {
+    font-size: 16px;    
+}
+
+.check {
+    color: #f23a3c;
+    font-size: 16px;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+textarea {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    width: 100%;
+    height: 160px;
+    line-height: 1.4;
+    overflow-y: hidden;
+    padding: 10px;
+    resize: none;
+}
+
+/* option {
+
+} */
+
+
+select {
+    width: 500px;
+    height: 50px;
+}
+.privacy-policy {
+    margin:  0px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.privacy-policy input{
+    width: 10px;
+    height: 10px;
+}
+
+.send {
+    background-color: #333;
+    width: 377px;
+    height: 60px;
+}
+
+/*法人用フォーム*/
+#form-corporate {
+    margin: 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    display: none;
+}
+
+.privacy-policy {
+    margin:  0px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+ /*
+ privacy-policy.html
+ */
+
+
+ /*
+ footer
+ */
+footer {
+    font-family: "Frank Ruhl Libre", serif;
+    background-color: #969495;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 50px 0px;
+    width: 100%;
+    height: auto;
+
+}
+footer img {
+    width: auto;
+    height: 80px;
+
+}
+.list-footer{
+    display: flex;
+    list-style: none;
+    margin-top: 30px;
+    gap: 50px;
+}
+footer a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+ }
+
+ /*横画面用*/
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;
+    }
+}

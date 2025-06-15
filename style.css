@@ -471,6 +471,7 @@ select {
 
 .send {
     background-color: #333;
+    font-size: 24px;
     width: 377px;
     height: 60px;
 }

@@ -14,25 +14,54 @@
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Noto+Serif+JP&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="images/trs_black.webp" alt="株式会社TRS" class="logo-img" >
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Top</a>
-                </li>
-                <li>
-                    <a href="business.html">Business</a>
-                </li>
-                <li>
-                    <a href="company.html">Company</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <img src="images/trs_black.webp" alt="株式会社TRS" class="logo-img" >
+    <div class="pc-menu">  
+      <nav>
+        <ul class="pc-list">
+          <li>
+              <a href="index.html">Top</a>
+          </li>
+          <li>
+              <a href="business.html">Business</a>
+          </li>
+          <li>
+              <a href="company.html">Company</a>
+          </li>
+          <li>
+              <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="phone-menu">  
+      <nav>
+        <div class="open-btn">
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu">
+          <div class="close-btn">
+              <span></span>
+          </div>
+          <div class="sp-list">
+            <li>
+                <a href="index.html">Top</a>
+            </li>
+            <li>
+                <a href="business.html">Business</a>
+            </li>
+            <li>
+                <a href="company.html">Company</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
     <div class="trs-headline">
         <div class="trs-img">
             <div class="mainpage-top">
@@ -85,7 +114,7 @@
         <div class="box">
             <img src="images/plan.webp" class="band-img">
             <div class="box-text">
-                <p class="box-font">Survice</p>
+                <p class="box-font">Service</p>
                 <p>奉仕</p>
             </div>
         </div>
@@ -107,7 +136,7 @@
         <img src="images/work.webp" class="contact-img">
         <div class="contact-text">
             <p class="contact-title">Contact</p>
-            <p class="contact-discription">フォームよりお気軽にお問い合わせください。</p>
+            <p class="contact-description">フォームよりお気軽にお問い合わせください。</p>
             <div class="form-buttons1">
                 <button type="button" onclick="showForm('personal')">一般の方はこちら</button>
                 <button type="button" onclick="showForm('corporate')">法人の方はこちら</button>

@@ -23,7 +23,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: transparent;
-    flex-direction: column;
+    flex-direction: row;
     z-index: 5;
  }
  /*ロゴのサイズと配置*/
@@ -34,7 +34,7 @@ body {
     margin-left: 50px;
   }
 /*リストのスタイル*/  
-nav ul {   
+.pc-list {   
     list-style: none;
     padding: 0px;
     margin-right: 100px;
@@ -80,7 +80,7 @@ header a {
     font-size: 60px;
 }
 
-.contact-discription {
+.contact-description {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -260,9 +260,11 @@ index.html
     position :relative;
     width: calc(100%/3);
     height: auto;
+    z-index: 1;
 }
 
 .band-img {
+    position: absolute;
     opacity: 0.3;
     width: 100%;
     height: auto;
@@ -280,6 +282,7 @@ index.html
     font-weight: 400;
     line-height: 1.4;
     text-align: center;
+    z-index: 2;
 }
 
 .box-font {
@@ -534,9 +537,167 @@ footer a {
     color: #ffffff;
  }
 
- /*横画面用*/
-@media (min-width: 600px) {
-    header {
-        flex-direction: row;
+ /*縦画面用*/
+@media (max-width: 840px) {
+    /*index.html*/
+    /*header切替用*/
+    .header {
+        position: relative;
+    }
+    .pc-menu {
+        display: none;
+    }
+    .phone-menu {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 75%; 
+        height: auto;
+        z-index: 1;
+        background-color: #000;
+    }
+    nav {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 1;        
+    }      
+    .open-btn {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        top: 0px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background-color: #000;
+        z-index: 3;
+        cursor: pointer;
+    }
+    .open-btn span {
+        display: block;
+        width: 50px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 0px;
+        z-index: 3;
+    }
+    .menu {
+        margin-right: 0px;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 450px;
+        display: none;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: -4px 4px 10px  rgba(3,3,3,0.2);
+        z-index: 4;
+    }
+    .close-btn {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .close-btn span {
+        width: 68px;
+        height: 68px;
+        right: 100px;
+        border: 2px solid #000;
+        background-color: transparent;
+        z-index: 6;
+    }
+    .sp-list {
+        list-style: none;
+        top: 0px;
+        right: 0px;
+        margin: 150px 65px 0px 0px;
+    }
+    .sp-list li {
+        margin-bottom: 50px;
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    .sp-list li a {
+        cursor: pointer;
+        color: #333;
+    }
+    .close-btn span, .sp-list {
+        position: absolute;
+    }
+
+    .close-btn span::before,.close-btn span::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 48px;
+        background: #000;
+        z-index: 6;
+    }
+    .close-btn span::before {
+        transform: translate(-50%,-50%) rotate(45deg); 
+    }
+    .close-btn span::after {
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
+
+    .about  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 150px auto;
+        width: 85%;
+        max-width: 100%;
+    }
+    .about div {
+        margin: 50px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .trs-band { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 30px;
+        margin: 0;
+        z-index: 0;
+    }
+    .box {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 270px;
+        object-fit: cover;
+    }
+    .band-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width: 1100px) {
+    .summary {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .summary-text{
+        white-space: normal;
+    }
+    .lifestyle-img {
+        margin-top: 50px;
     }
 }

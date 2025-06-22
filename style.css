@@ -391,12 +391,17 @@ index.html
  /*ページ上部のスタイル*/
  .trs-content {
     margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
  }
 
  .trs-content img {
-    width: 100%;
+    width: 1920px;
     height: 400px;
-    max-width: 100%;
+    max-width: 1920px;
     object-fit: cover;
  }
 
@@ -408,7 +413,7 @@ index.html
 }
 
 h1 {
-    margin: 30px;
+    margin-top: 30px;
 }
 
 .text-title{
@@ -421,7 +426,7 @@ h1 {
 }
 
 .title-sub{
-    margin: 0px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -430,10 +435,12 @@ h1 {
 
 /*ボタン配置*/
 .form-box{
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 75%;
     height: auto;
 }
 
@@ -441,7 +448,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 75%;    
+    width: 100%;    
 }
 
 .form-buttons button {
@@ -465,7 +472,7 @@ h1 {
 /*一般用フォーム*/
 
 #form-personal {
-    margin: 100px 0px;
+    margin: 150px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -475,15 +482,19 @@ h1 {
 }
 
 label {
+    display: block;
     width: 85%;
     height: auto;
     margin-bottom: 5px;
+    margin: 0 auto 5px auto; 
 }
 
 .label-name {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     z-index: 2;
+    margin-bottom: 10px;
 }
 
 .contact-form {
@@ -504,71 +515,79 @@ input {
     padding: 10px;
 }
 
+input,select {
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;   
+}
 textarea {
-    display: flex;
-    justify-content: center;
+    display: block; 
+    margin: 0 auto; 
     font-size: 15px;
     width: 100%;
     height: 160px;
-    line-height: 1.4;
-    overflow-y: hidden;
     padding: 10px;
-    resize: none;
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    resize: none; 
 }
-
 /* option {
 
 } */
 
-
 select {
-    width: 500px;
+    margin-left: 0px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
     height: 50px;
 }
 
 .privacy-policy {
-    margin:  0px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    width: 100%;
+    height: auto;
 }
 
-
-.privacy-policy input{
-    width: 10px;
-    height: 10px;
+.privacy-policy input {
+    margin: 0px 10px 0px 0px;
+    width: 13px;
+    height: 13px; 
 }
-
 
 .send {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #333;
     font-size: 24px;
-    width: 377px;
+    width: 100%;
+    max-width: 377px;
     height: 60px;
+    margin: 0 auto 5px auto; 
 }
 
 /*法人用フォーム*/
 #form-corporate {
-    margin: 100px 0px;
-    display: flex;
+    margin: 150px 0px;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 75%;
     height: auto;
-    display: none;
 }
 
-.privacy-policy {
-    margin:  0px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-}
 
  /*
  privacy-policy.html
@@ -577,7 +596,7 @@ select {
  /*縦画面用*/
 @media (max-width: 840px) {
     /*index.html*/
-    /*header切替用*/
+    /*headerメニュー切替用*/
     .header {
         position: relative;
     }
@@ -730,7 +749,7 @@ select {
     .close-btn span::after {
         transform: translate(-50%,-50%) rotate(-45deg);
     }
-
+    /*about並び変更*/
     .about  {
         display: flex;
         flex-direction: column;
@@ -745,7 +764,7 @@ select {
         display: flex;
         flex-direction: column;
     }
-
+    /* 画像縦配置 */
     .trs-band { 
         display: flex;
         flex-direction: column;
@@ -785,6 +804,22 @@ select {
 }
 
 @media (max-width: 540px) {
+    /*問い合わせページボタン縦配置*/
+    .form-buttons {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .form-buttons button {
+        width: 100%;
+    }
+
+    #form-personal,#form-corporate {
+        margin-top: 30px;
+    }
+    /*footer*/
     footer,.list-footer {
         width: 100%;
         height: auto;

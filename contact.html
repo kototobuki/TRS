@@ -72,8 +72,8 @@
             </div>
             <div class="form-box">
                 <div class="form-buttons">
-                    <button type="button" onclick="showForm('personal')">一般の方はこちら</button>
-                    <button type="button" onclick="showForm('corporate')">法人の方はこちら</button>
+                    <button type="button" id="btn-personal">一般の方はこちら</button>
+                    <button type="button" id="btn-corporate">法人の方はこちら</button>
                 </div>
                 <form id="form-personal">
                     <label>
@@ -211,7 +211,7 @@
                     </label>
                     <label class="privacy-policy">
                         <p class="contact-form">I agree to the Privacy Policy.</p>
-                        <input name="agree" type="checkbox" title="続行する場合は、このチェックボックスをオンにしてください">
+                        <input class="checkbox-style"  name="agree" type="checkbox" title="続行する場合は、このチェックボックスをオンにしてください">
                     </label>
                     <button class="send">Send</button>
                 </form>

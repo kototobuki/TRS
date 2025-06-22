@@ -41,11 +41,60 @@ body {
     display: flex;
     gap: 40px;
 }
+
+.phone-menu {
+    display: none;
+}
+
 header a {
     text-decoration: none;
     font-size: 20px;
     color: #333;
  }
+
+  /*
+ footer
+ */
+footer {
+    font-family: "Frank Ruhl Libre", serif;
+    background-color: #969495;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 50px 0px;
+    width: 100%;
+    height: auto;
+
+}
+
+footer img {
+    width: auto;
+    height: 80px;
+
+}
+
+.list-footer {
+    display: flex;
+    list-style: none;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.list-footer a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    transition: .2s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+ 
+.list-footer a:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
 
  /*Contactフォーム誘導*/
 .contact-section {
@@ -177,7 +226,7 @@ index.html
 }
 
 /*ボタン作成*/  
-.btn-frame{
+.btn-frame {
     width: 100%;
     height: 150px;
 }
@@ -257,29 +306,30 @@ index.html
 
 /*画像3つ並び*/
 .trs-band {
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: auto;
     margin: 0;
-    z-index: 0;
+    z-index: 1;
 }
 
 .box {
     background-color: #000;
-    position :relative;
+    position: relative;
     width: calc(100%/3);
     height: auto;
-    z-index: 1;
+    z-index: 2;
 }
 
 .band-img {
-    position: absolute;
-    opacity: 0.3;
     width: 100%;
-    height: auto;
+    height: 270px;
     display: block;
+    object-fit: cover;
+    opacity: 0.3;
     z-index: 1;
 }
 
@@ -524,42 +574,6 @@ select {
  privacy-policy.html
  */
 
-
- /*
- footer
- */
-footer {
-    font-family: "Frank Ruhl Libre", serif;
-    background-color: #969495;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    padding: 50px 0px;
-    width: 100%;
-    height: auto;
-
-}
-
-footer img {
-    width: auto;
-    height: 80px;
-
-}
-
-.list-footer{
-    display: flex;
-    list-style: none;
-    margin-top: 30px;
-    gap: 50px;
-}
-
-footer a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #ffffff;
- }
-
  /*縦画面用*/
 @media (max-width: 840px) {
     /*index.html*/
@@ -767,5 +781,16 @@ footer a {
     }
     .lifestyle-img {
         margin-top: 50px;
+    }
+}
+
+@media (max-width: 540px) {
+    footer,.list-footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

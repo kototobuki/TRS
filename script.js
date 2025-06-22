@@ -1,13 +1,25 @@
-  function showForm(type) {
-    const personalForm = document.getElementById('form-personal');
-    const corporateForm = document.getElementById('form-corporate');
+const openBtn = document.querySelector(".open-btn");
+const menu = document.querySelector(".menu");
+const closeBtn = document.querySelector(".close-btn span");
 
-    if (type === 'personal') {
-      personalForm.style.display = 'flex';
-      corporateForm.style.display = 'none';
-    } else if (type === 'corporate') {
-      personalForm.style.display = 'none';
-      corporateForm.style.display = 'flex';
-    }
-  }
-  
+openBtn.addEventListener("click", () => {
+  const isHidden = window.getComputedStyle(menu).display === "none";
+  menu.style.display = isHidden ? "block" : "none";
+});
+
+
+openBtn.addEventListener("click", () => {
+  menu.classList.remove("hide"); 
+  menu.style.display = "flex";
+  menu.classList.add("show"); 
+});
+
+closeBtn.addEventListener("click", () => {
+  menu.classList.remove("show");
+  menu.classList.add("hide");
+
+  setTimeout(() => {
+    menu.style.display = "none";
+    menu.classList.remove("hide"); 
+  }, 500); 
+});

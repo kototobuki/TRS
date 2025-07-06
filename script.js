@@ -1,87 +1,65 @@
-// メニュー表示
-const openBtn = document.querySelector(".open-btn");
-const menu = document.querySelector(".menu");
-const closeBtn = document.querySelector(".close-btn span");
+document.addEventListener("DOMContentLoaded", () => {
+  // メニュー開閉
+  const openBtn = document.querySelector(".open-btn");
+  const menu = document.querySelector(".menu");
+  const closeBtn = document.querySelector(".close-btn span");
 
-openBtn.addEventListener("click", () => {
-  const isHidden = window.getComputedStyle(menu).display === "none";
-  menu.style.display = isHidden ? "block" : "none";
-});
-
-
-openBtn.addEventListener("click", () => {
-  menu.classList.remove("hide"); 
-  menu.style.display = "flex";
-  menu.classList.add("show"); 
-});
-
-closeBtn.addEventListener("click", () => {
-  menu.classList.remove("show");
-  menu.classList.add("hide");
-
-  setTimeout(() => {
-    menu.style.display = "none";
-    menu.classList.remove("hide"); 
-  }, 500); 
-});
-
-// フォームの切り替え
-$(function () {
-  $("#btn-personal").on("click", function () {
-    $("#form-corporate").hide();
-    $("#form-personal").show();
+  openBtn.addEventListener("click", () => {
+    menu.classList.remove("hide");
+    menu.style.display = "flex";
+    menu.classList.add("show");
   });
 
-  $("#btn-corporate").on("click", function () {
-    $("#form-personal").hide();
-    $("#form-corporate").show();
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("show");
+    menu.classList.add("hide");
+
+    setTimeout(() => {
+      menu.style.display = "none";
+      menu.classList.remove("hide");
+    }, 500);
   });
+})
+
+// フォーム切替 + スクロール
+const btnPersonal = document.getElementById("btn-personal");
+const btnCorporate = document.getElementById("btn-corporate");
+const formPersonal = document.getElementById("form-personal");
+const formCorporate = document.getElementById("form-corporate");
+
+btnPersonal?.addEventListener("click", () => {
+  formCorporate.style.display = "none";
+  formPersonal.style.display = "flex";
+
+  const rect = formPersonal.getBoundingClientRect();
+  const offset = window.scrollY + rect.top;
+  window.scrollTo({ top: offset, behavior: "smooth" });
 });
 
-//　スライド
-$(function () {
-  $("#btn-personal").on("click", function () {
-    $("#form-corporate").hide();
-    $("#form-personal").show();
+btnCorporate?.addEventListener("click", () => {
+  formPersonal.style.display = "none";
+  formCorporate.style.display = "flex";
 
-    $("html, body").animate({
-      scrollTop: $("#form-personal").offset().top
-    }, 600);
-  });
-
-  $("#btn-corporate").on("click", function () {
-    $("#form-personal").hide();
-    $("#form-corporate").show();
-
-    $("html, body").animate({
-      scrollTop: $("#form-corporate").offset().top
-    }, 600);
-  });
-});
-// 高さ制御
-document.getElementById("btn-personal").addEventListener("click", () => {
-  const form = document.getElementById("form-personal");
-  form.style.display = "flex";
-  document.getElementById("form-corporate").style.display = "none";
-
-  // スクロール位置を調整
-  const formRect = form.getBoundingClientRect();
-  const offset = formRect.bottom - window.innerHeight;
-  window.scrollBy({
-    top: offset,
-    behavior: "smooth"
-  });
+  const rect = formCorporate.getBoundingClientRect();
+  const offset = window.scrollY + rect.top;
+  window.scrollTo({ top: offset, behavior: "smooth" });
 });
 
-document.getElementById("btn-corporate").addEventListener("click", () => {
-  const form = document.getElementById("form-corporate");
-  form.style.display = "flex";
-  document.getElementById("form-personal").style.display = "none";
+// 遷移用ボタンのイベント設定
+window.addEventListener("DOMContentLoaded", () => {
+  const btnGoPersonal = document.getElementById("go-personal");
+  const btnGoCorporate = document.getElementById("go-corporate");
 
-  const formRect = form.getBoundingClientRect();
-  const offset = formRect.bottom - window.innerHeight;
-  window.scrollBy({
-    top: offset,
-    behavior: "smooth"
-  });
-});
+  if (btnGoPersonal) {
+    btnGoPersonal.addEventListener("click", () => {
+      window.location.href = "contact.html?type=personal";
+    });
+  }
+
+  if (btnGoCorporate) {
+    btnGoCorporate.addEventListener("click", () => {
+      window.location.href = "contact.html?type=corporate";
+    });
+  }
+
+})

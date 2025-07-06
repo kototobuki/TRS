@@ -8,9 +8,9 @@ body {
     height: 100%;
     width: 100%;
     font-family: "Noto Serif JP", serif;
+    /* overflow-x: hidden; */
 }
 
- /*縦画面用*/
  /*header*/
  header {
     font-family: "Frank Ruhl Libre", serif;
@@ -21,7 +21,7 @@ body {
     top: 0;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 0px;
     background-color: transparent;
     flex-direction: row;
     z-index: 5;
@@ -31,7 +31,7 @@ body {
     width: auto;
     height: 50px;
     display: block;
-    margin-left: 50px;
+    margin-left: 100px;
   }
 /*リストのスタイル*/  
 .pc-list {   
@@ -139,7 +139,8 @@ footer img {
     white-space: nowrap;
 }
 
-/*問い合わせ用のボタン*/
+
+/* 問い合わせ遷移のボタン */
 .form-buttons1 {
     display: flex;
     gap: 80px;
@@ -187,6 +188,11 @@ index.html
     align-items: center;
 }
 
+.mainpage-top {
+    width: 100%;
+    height: 750px;
+}
+
 /*背景画像*/
 .top-img {  
     position: absolute;
@@ -194,7 +200,7 @@ index.html
     justify-content: flex-end;
     top: 0px;
     right: 0px;
-    height:750px;
+    height:100%;
     width: 55%;
     z-index: 1;
 }
@@ -203,7 +209,9 @@ index.html
     position: absolute;
     margin-top: 250px;
     left: 45%;
-    transform: translateX(-120px);
+    /* transform: translateX(-120px); */
+    width: 50%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -211,32 +219,43 @@ index.html
 }
 
 .trust-img {
-    width :200px;
-    height :auto;
+    width: 200px;
+    height: auto;
+    margin-left: -120px;
+    max-width: calc(100% - -120px);
 }
 
 .responsibility-img {
-    width :550px;
+    width: 550px;
     height :auto;
+    margin-left: -120px;
+    max-width: calc(100% - -120px);
 }
 
 .service-img {
-    width :300px;
+    width : 300px;
     height :auto;
+    margin-left: -120px;
+    max-width: calc(100% - -120px);
 }
 
 /*ボタン作成*/  
 .btn-frame {
-    width: 100%;
-    height: 150px;
+    margin-left: 150px;
+    align-items: flex-start;
+    width: 740px;
+    max-width: 590px;
+    height: 200px;
 }
 
 .btn-link{
-    margin: 800px 0px 50px 150px;
+    position: absolute;
+    margin: 50px 0px;
     text-decoration: none;
     color: #ffffff;
     background: linear-gradient(to right,#969495, #d8d8d8);
-    width: 590px;
+    width: 70vw;
+    max-width: 590px;
     height: 100px;
     display: flex;
     align-items: center;
@@ -252,7 +271,7 @@ index.html
 }
 
 .btn-text1 {
-    margin-left: 200px;
+    margin-left: clamp(100px, 20vw, 200px);
     font-size: 24px;
     font-family: "Frank Ruhl Libre", serif;
 }
@@ -280,9 +299,9 @@ index.html
 }
 
 .building-img {
-    width: 500px;
+    width: 45%;
     height: auto;
-    max-width: 100%;
+    max-width: 500px;
 }
 
 .about div {
@@ -301,7 +320,7 @@ index.html
     margin-top: 30px;
     font-size: 24px;
     line-height: 1.8;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 /*画像3つ並び*/
@@ -350,7 +369,7 @@ index.html
     font-family: "Frank Ruhl Libre", serif;
 }
 
-/*下部*/
+/*summary*/
 .summary {
     margin: 150px 0px;
     flex-direction: row-reverse;
@@ -394,6 +413,7 @@ index.html
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: auto;
  }
@@ -401,7 +421,7 @@ index.html
  .trs-content img {
     width: 1920px;
     height: 400px;
-    max-width: 1920px;
+    max-width: 100%;
     object-fit: cover;
  }
 
@@ -594,15 +614,44 @@ select {
  */
 
  /*縦画面用*/
+@media (max-width: 1300px) {
+    .about br {
+        display: none;
+    }
+    
+}
+@media (max-width: 1100px) {
+    .summary {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .summary-text{
+        white-space: normal;
+    }
+
+    .lifestyle-img {
+        margin-top: 50px;
+    }
+}
+
 @media (max-width: 840px) {
-    /*index.html*/
-    /*headerメニュー切替用*/
+    /* index.html*/
+    /*headerメニュー切替用 */
     .header {
         position: relative;
+        width: 100%;
     }
+    .logo-img {
+        margin-left: 50px;
+    }
+
     .pc-menu {
         display: none;
     }
+    
     .phone-menu {
         position: absolute;
         display: block;
@@ -722,6 +771,10 @@ select {
         line-height: 1.4;
     }
 
+    header a {
+    font-size: 24px;
+ }
+
     .sp-list a {
         cursor: pointer;
         color: #333;
@@ -749,6 +802,8 @@ select {
     .close-btn span::after {
         transform: translate(-50%,-50%) rotate(-45deg);
     }
+
+
     /*about並び変更*/
     .about  {
         display: flex;
@@ -759,11 +814,26 @@ select {
         max-width: 100%;
     }
 
+    .building-img {
+        width: 100%;
+    }
     .about div {
+        left: 0px;
         margin: 50px 0px 0px 0px;
         display: flex;
         flex-direction: column;
+        max-width: 500px;
     }
+
+    .about-img {
+        width: 100%;
+        max-width: 160px;
+    }
+
+    .about-description {
+        white-space: initial;
+    }
+
     /* 画像縦配置 */
     .trs-band { 
         display: flex;
@@ -787,23 +857,216 @@ select {
         width: 100%;
         height: 100%;
     }
-}
-@media (max-width: 1100px) {
+
+    /*summary*/
     .summary {
+        margin: 50px 50px;
         display: flex;
         flex-direction: column;
-        flex-direction: column-reverse;
+        justify-content: center;
         align-items: center;
     }
+
     .summary-text{
-        white-space: normal;
-    }
-    .lifestyle-img {
         margin-top: 50px;
+        white-space: normal;
+        font-size: 18px;
+    }
+
+    .lifestyle-img {
+        margin-top: 0px;
     }
 }
 
 @media (max-width: 540px) {
+    header {
+        padding: 0px;
+    }
+
+    /*問い合わせ遷移*/
+    .contact-section {
+        /* position: relative; */
+        margin-top: 50px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-img  {
+        width: auto;
+        height: 490px;
+    }
+
+    /* .contact-text {
+    } */
+
+    .contact-title {
+        font-family: "Frank Ruhl Libre", serif;
+    }
+
+    .contact-description {
+        font-size: 18px;
+    }
+
+    .form-buttons1 {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 20px;
+    }
+
+    /* footer */
+    footer {
+        margin-top: 30px;
+    }
+
+    footer img {
+        width: 30%;
+        height: auto;
+        max-width: 30%;
+    }
+    /*headline*/
+    .open-btn {
+        width: 80px;
+        height: 80px;
+        gap: 4px;
+    }
+    .open-btn span {
+        width: 33.3px;
+        height: 4.5px;
+    }
+
+    .menu {
+        height: 100vh;
+    }
+
+    .close-btn {
+        height: 100px;
+    }
+
+    .close-btn span {
+        width: 36px;
+        height: 36px;
+    }
+    
+
+    .close-btn span::before,.close-btn span::after {
+        width: 2px;
+        height: 24px;
+    }
+
+    /*trs-headline*/
+    .mainpage-top {
+        height: 70vh;
+    }
+
+    .trs {
+        margin-top: 0px;
+        width: 100%;
+        height: auto;
+        left: 20px;
+        bottom: 20px;
+        transform: none;
+
+    }
+    .trust-img {
+        width: 30vw;
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .responsibility-img {
+        width: 80vw;
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .service-img {
+        width: 40vw;
+        height: auto;
+        margin-left: 0px;
+    }
+
+    /* ボタン */
+    .btn-frame {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .btn-link{
+        width: 90%;
+        height: 70px;
+        margin: 0px 0px;
+        z-index: 2;
+    }
+
+    .btn-text1 {
+        margin-left: 50px;
+    }
+
+    .btn-text2 {
+         width: 50px;
+        height: 50px;
+    }
+
+    /*about*/
+    .about {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 50px 0px;
+    }
+    
+    .building-img {
+        width: 90%;
+    }
+
+    .about div {
+        width: 90%;
+    }
+    .about-description {
+        font-size: 18px;
+    } 
+
+    /* 画像縦配置 */
+    .trs-band { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 0px;
+        margin: 0;
+        z-index: 0;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+    }
+    
+    .band-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*summary*/
+    .summary {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        align-items: center;
+    }
+
     /*問い合わせページボタン縦配置*/
     .form-buttons {
         display: flex;
@@ -812,6 +1075,7 @@ select {
         justify-content: center;
         gap: 20px;
     }
+
     .form-buttons button {
         width: 100%;
     }
@@ -819,6 +1083,7 @@ select {
     #form-personal,#form-corporate {
         margin-top: 30px;
     }
+
     /*footer*/
     footer,.list-footer {
         width: 100%;
@@ -827,5 +1092,80 @@ select {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        padding: 0px 0px;
+        height: auto;
+    }
+    .logo-img {
+        width: 130px;
+        height: auto;
+        display: block;
+        margin-left: 30px;
+  }
+
+    /* ボタン */
+    .btn-frame {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .btn-link{
+        width: 90%;
+        height: 50px;
+        margin: 0px 0px;
+        z-index: 2;
+    }
+
+    .btn-text1 {
+        margin-left: 30px;
+        font-size: 18px;
+    }
+
+    .btn-text2 {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;        
+    }
+
+    /*about*/
+    .about {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px 0px;
+        width: 100%;
+    }
+
+    .building-img {
+        width: 90%;
+    }
+
+    .about div {
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin: 30px 0px 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .about-img {
+        margin-right: auto;
+        top: 0px;
+        left: 0px;
+        width: 50%;
+        max-width: 160px;
     }
 }

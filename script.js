@@ -46,20 +46,55 @@ btnCorporate?.addEventListener("click", () => {
 });
 
 // 遷移用ボタンのイベント設定
+// window.addEventListener("DOMContentLoaded", () => {
+//   const btnGoPersonal = document.getElementById("go-personal");
+//   const btnGoCorporate = document.getElementById("go-corporate");
+
+//   if (btnGoPersonal) {
+//     btnGoPersonal.addEventListener("click", () => {
+//       window.location.href = "contact.html?type=personal";
+//     });
+//   }
+
+//   if (btnGoCorporate) {
+//     btnGoCorporate.addEventListener("click", () => {
+//       window.location.href = "contact.html?type=corporate";
+//     });
+//   }
+
+// })
+
+//　遷移用
 window.addEventListener("DOMContentLoaded", () => {
-  const btnGoPersonal = document.getElementById("go-personal");
-  const btnGoCorporate = document.getElementById("go-corporate");
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get("type");
+  if (!btnPersonal || !btnCorporate || !formPersonal || !formCorporate) return;
 
-  if (btnGoPersonal) {
-    btnGoPersonal.addEventListener("click", () => {
-      window.location.href = "contact.html?type=personal";
-    });
+  // 通常のフォーム切り替えボタン処理
+  btnPersonal.addEventListener("click", () => {
+    formCorporate.style.display = "none";
+    formPersonal.style.display = "flex";
+
+    const rect = formPersonal.getBoundingClientRect();
+    const offset = window.scrollY + rect.top;
+    window.scrollTo({ top: offset, behavior: "smooth" });
+  });
+
+  btnCorporate.addEventListener("click", () => {
+    formPersonal.style.display = "none";
+    formCorporate.style.display = "flex";
+
+    const rect = formCorporate.getBoundingClientRect();
+    const offset = window.scrollY + rect.top;
+    window.scrollTo({ top: offset, behavior: "smooth" });
+  });
+
+  // 遷移時のフォーム自動表示
+  if (type === "personal") {
+    formCorporate.style.display = "none";
+    formPersonal.style.display = "flex";
+  } else if (type === "corporate") {
+    formPersonal.style.display = "none";
+    formCorporate.style.display = "flex";
   }
-
-  if (btnGoCorporate) {
-    btnGoCorporate.addEventListener("click", () => {
-      window.location.href = "contact.html?type=corporate";
-    });
-  }
-
-})
+});

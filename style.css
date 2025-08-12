@@ -1026,7 +1026,7 @@ select {
 
     .trust-img {
         width: calc(70% - 20px);
-        max-width: calc(70% - 20px);
+        max-width: calc(40% - 20px);
         height: auto;
         margin-left: 0px;
     }
@@ -1039,8 +1039,8 @@ select {
     }
 
     .service-img {
-        width: calc(80% - 20px);
-        max-width: calc(80% - 20px);
+        width: calc(50% - 20px);
+        max-width: calc(50% - 20px);
         height: auto;
         margin-left: 0px;
     }

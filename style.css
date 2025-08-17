@@ -100,7 +100,6 @@ footer img {
 .contact-section {
     position: relative;
     background-color: #000;
-    display: flex;
     align-content: center;
     justify-content: center;
     width: 100%;
@@ -108,22 +107,19 @@ footer img {
 }
 
 .contact-img  {
+    position: absolute;
     width: 100%;
-    height: 450px;
+    height: 100%;
     opacity: 0.4;
     object-fit: cover;
 }
 
 .contact-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 100px 0px;
+    position: relative;
+    margin: 100px 0px;
     width: 100%;
-    height: auto;
-    transform: translate(-50%, -50%);
+    height:auto;
     color: #ffffff;
-
 }
 
 .contact-title {
@@ -147,15 +143,15 @@ footer img {
  .form-buttons1 {
     display: flex;
     margin-top: 30px;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 24px;
-    
+    gap: 100px;
 }
 
  .form-buttons1 div {
     color: #ffffff;
     border: 2px solid #ffffff;
-    width: 100%;
+    width: auto;
     height: auto;
     margin-top: 10px;
     /* white-space: nowrap; */
@@ -1138,7 +1134,7 @@ select {
 
     /*問い合わせページボタン縦配置*/
     .contact-img {
-        height: 450px;
+        height: 100%;
     }
 
     .contact-title {
@@ -1264,7 +1260,7 @@ select {
 
     /*contact遷移*/
     .contact-img {
-        height: 800px;
+        height: 100%;
     }
     .contact-title {
         word-break: break-all;

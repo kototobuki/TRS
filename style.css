@@ -1,0 +1,1278 @@
+ @charset "UTF-8";
+ /*
+ 共通
+ */
+body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Noto Serif JP", serif;
+    overflow-x: hidden;
+}
+
+ /*header*/
+ header {
+    font-family: "Frank Ruhl Libre", serif;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: transparent;
+    flex-direction: row;
+    z-index: 5;
+ }
+ /*ロゴのサイズと配置*/
+ .logo-img {  
+    width: auto;
+    height: 50px;
+    display: block;
+    margin-left: 100px;
+  }
+/*リストのスタイル*/  
+.pc-list {   
+    list-style: none;
+    padding: 0px;
+    margin-right: 100px;
+    display: flex;
+    gap: 40px;
+}
+
+.phone-menu {
+    display: none;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+ }
+
+  /*
+ footer
+ */
+footer {
+    font-family: "Frank Ruhl Libre", serif;
+    background-color: #969495;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 50px 0px;
+    width: 100%;
+    height: auto;
+
+}
+
+footer img {
+    width: auto;
+    height: 80px;
+
+}
+
+.list-footer {
+    display: flex;
+    list-style: none;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.list-footer a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    transition: .2s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+ 
+.list-footer a:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+ /*Contactフォーム誘導*/
+.contact-section {
+    position: relative;
+    background-color: #000;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.contact-img  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    object-fit: cover;
+}
+
+.contact-text {
+    position: relative;
+    margin: 100px 0px;
+    width: 100%;
+    height:auto;
+    color: #ffffff;
+}
+
+.contact-title {
+    font-family: "Frank Ruhl Libre", serif;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.contact-description {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+
+/* 問い合わせ遷移のボタン */
+ .form-buttons1 {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 24px;
+    gap: 100px;
+}
+
+ .form-buttons1 div {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    /* white-space: nowrap; */
+    display: flex;
+    align-items: center;
+ }
+
+ .form-buttons1 div a {
+    width: 100%;
+    height: auto;
+    padding: 20px 50px;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ .form-buttons1 div:hover {
+    background-color: #d8d8d8;
+    opacity: 0.7;
+
+}
+
+ .form-buttons1 div a:hover {
+    color: #333;
+}
+
+/*
+index.html
+*/
+.trs-headline {
+    background: linear-gradient(to right,#969495, #d8d8d8);
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    opacity: 0;
+    animation:  fadeIn 3s ease 1s forwards; /*フェードイン*/
+    z-index: 0;
+}
+
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.trs-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainpage-top {
+    width: 100%;
+    height: 750px;
+}
+
+/*背景画像*/
+.top-img {  
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 0px;
+    right: 0px;
+    height:100%;
+    width: 55%;
+    z-index: 1;
+}
+
+.trs {
+    position: absolute;
+    margin-top: 250px;
+    left: 45%;
+    /* transform: translateX(-120px); */
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+}
+
+.trust-img {
+    width: 200px;
+    height: auto;
+    margin-left: -120px;
+    max-width: calc(100% - -120px);
+}
+
+.responsibility-img {
+    width: 550px;
+    height :auto;
+    margin-left: -120px;
+    max-width: calc(100% - -120px);
+}
+
+.service-img {
+    width : 300px;
+    height :auto;
+    margin-left: -120px;
+    max-width: calc(100% - -120px);
+}
+
+/*ボタン作成*/  
+/* .btn-frame {
+    align-items: flex-start;
+    width: 100%;
+    height: 200px;
+    margin-left: 150px;
+
+} */
+.btn-frame {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 200px;
+    justify-content: center;
+    margin: 0px 0px 0px 150px;
+    width: calc(100% - 150px);
+    /* max-width: calc(100% - 150px); */
+}
+
+.btn-link{
+    /* position: absolute; */
+    /* margin: 50px 0px; */
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(to right,#969495, #d8d8d8);
+    width:590px;
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid#ffffff;
+    border-radius: 0px 50px 50px 50px;
+    z-index: 2;
+}
+
+.btn-link:hover {
+    background: #333 ;
+}
+
+.btn-text1 {
+    margin-left: clamp(100px, 20vw, 200px);
+    font-size: 24px;
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+.btn-text2 {
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid#ffffff;
+    border-radius: 50%;
+}
+
+
+
+/*aboutタグ内の装飾*/
+.about  {
+    display: flex;
+    justify-content: center;
+    margin: 150px auto;
+    width: 85%;
+    max-width: 100%;
+}
+
+.building-img {
+    width: 45%;
+    height: auto;
+    max-width: 500px;
+}
+
+.about div {
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-img {
+    width: 160px;
+    height: auto;
+}
+
+.about-description {
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 1.8;
+    /* white-space: nowrap; */
+}
+
+/*画像3つ並び*/
+.trs-band {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    z-index: 1;
+}
+
+.box {
+    background-color: #000;
+    position: relative;
+    width: calc(100%/3);
+    height: auto;
+    z-index: 2;
+}
+
+.band-img {
+    width: 100%;
+    height: 270px;
+    display: block;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.box-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    z-index: 2;
+}
+
+
+
+.box-font {
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+/*summary*/
+.summary {
+    margin: 150px 0px;
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: center;
+    margin: 150px auto;
+    width: 85%;
+    max-width: 85%;
+}
+
+.lifestyle-img {
+    width: 100%;
+    height: 400px;
+    max-width: 400px;
+    
+}
+
+.summary-text {
+    margin-right: 30px;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 24px;
+    line-height: 1.8;
+    white-space: nowrap;
+}
+
+
+
+ /*
+ business.html
+ */
+
+ /*
+ company.html
+ */
+
+ /*
+ contact.html
+ */
+ /*ページ上部のスタイル*/
+ .trs-content {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+ }
+
+ .trs-content img {
+    width: 1920px;
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+ }
+
+.inner-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+.text-title{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: 60px;
+}
+
+.title-sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/*ボタン配置*/
+.form-box{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+}
+
+.form-buttons {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;    
+}
+
+.form-buttons button {
+    width: 35%;
+    height: 70px;
+    color: #333;
+    font-size: 24px;
+    border: 2px solid #333;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+}
+
+.form-buttons button:hover {
+    background-color: #333;
+    color: #d8d8d8;
+}
+/*一般用フォーム*/
+
+#form-personal {
+    margin: 150px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+}
+
+label {
+    display: block;
+    width: 85%;
+    height: auto;
+    margin-bottom: 5px;
+    margin: 0 auto 5px auto; 
+}
+
+.label-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    font-size: 16px;
+}
+
+.check {
+    color: #f23a3c;
+    font-size: 16px;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+input,select {
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;   
+}
+textarea {
+    display: block; 
+    margin: 0 auto; 
+    font-size: 15px;
+    width: 100%;
+    height: 160px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    resize: none; 
+}
+/* option {
+
+} */
+
+select {
+    margin-left: 0px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+}
+
+.privacy-policy {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.privacy-policy input {
+    margin: 0px 10px 0px 0px;
+    width: 13px;
+    height: 13px; 
+}
+
+.send {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 24px;
+    width: 100%;
+    max-width: 377px;
+    height: 60px;
+    margin: 0 auto 5px auto; 
+}
+
+/*法人用フォーム*/
+#form-corporate {
+    margin: 150px 0px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+}
+
+
+ /*
+ privacy-policy.html
+ */
+
+ /*縦画面用*/
+@media (max-width: 1300px) {
+    .about br {
+        display: none;
+    }
+    
+}
+@media (max-width: 1100px) {
+    .summary {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .summary-text{
+        white-space: normal;
+    }
+
+    .lifestyle-img {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 840px) {
+    /* index.html*/
+    /*headerメニュー切替用 */
+    .header {
+        position: relative;
+        width: 100%;
+    }
+    .logo-img {
+        margin-left: 50px;
+    }
+
+    .pc-menu {
+        display: none;
+    }
+    
+    .phone-menu {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 75%; 
+        height: auto;
+        z-index: 1;
+        background-color: #000;
+    }
+    nav {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 1;        
+    }      
+    .open-btn {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        top: 0px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background-color: #000;
+        z-index: 3;
+        cursor: pointer;
+    }
+    .open-btn span {
+        display: block;
+        width: 50px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 0px;
+        z-index: 3;
+    }
+
+    .menu {
+        display: none;
+        margin-right: 0px;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 450px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: -4px 4px 10px  rgba(3,3,3,0.2);
+        opacity: 0;
+        z-index: 4;
+    }
+
+    .menu.show {
+        display: flex;
+        animation: menuIn 0.5s ease forwards;
+    }
+
+    .menu.hide {
+        animation: menuOut 0.5s ease forwards;
+    }
+
+    @keyframes menuIn {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes menuOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    }
+
+    .close-btn {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .close-btn span {
+        width: 68px;
+        height: 68px;
+        right: 100px;
+        border: 2px solid #000;
+        background-color: transparent;
+        z-index: 6;
+    }
+
+    .menu ul {
+        position: absolute;
+        list-style: none;
+        top: 0px;
+        right: 0px;
+        margin: 150px 65px 0px 0px;
+    }
+
+    .menu ul li {
+        margin-bottom: 50px;
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    header a {
+    font-size: 24px;
+ }
+
+    .sp-list a {
+        cursor: pointer;
+        color: #333;
+    }
+
+    .close-btn span, .sp-list {
+        position: absolute;
+    }
+
+    .close-btn span::before,.close-btn span::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 48px;
+        background: #000;
+        z-index: 6;
+    }
+
+    .close-btn span::before {
+        transform: translate(-50%,-50%) rotate(45deg); 
+    }
+
+    .close-btn span::after {
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
+
+
+    /*about並び変更*/
+    .about  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 150px auto;
+        width: 85%;
+        max-width: 100%;
+    }
+
+    .building-img {
+        width: 100%;
+    }
+    .about div {
+        left: 0px;
+        margin: 50px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .about-img {
+        width: 100%;
+        max-width: 160px;
+    }
+
+    .about-description {
+        white-space: initial;
+    }
+
+    /* 画像縦配置 */
+    .trs-band { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 30px;
+        margin: 0;
+        z-index: 0;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 270px;
+        object-fit: cover;
+    }
+    
+    .band-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*summary*/
+    .summary {
+        margin-top: 50px;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .summary-text{
+        margin-top: 50px;
+        white-space: normal;
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .lifestyle-img {
+        margin-top: 50px;
+        width: 90%;
+        max-width: 90%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 650px) {
+    .form-buttons1 {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        font-size: 20px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    header {
+        padding: 0px;
+    }
+
+    /*問い合わせ遷移*/
+    .contact-section {
+        /* position: relative; */
+        margin-top: 50px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-img  {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .contact-title {
+        font-family: "Frank Ruhl Libre", serif;
+    }
+
+    .contact-description {
+        font-size: 18px;
+    }
+
+    /* footer */
+    footer {
+        margin-top: 30px;
+    }
+
+    footer img {
+        width: 30%;
+        height: auto;
+        max-width: 30%;
+    }
+    /*headline*/
+    .open-btn {
+        width: 80px;
+        height: 80px;
+        gap: 4px;
+    }
+    .open-btn span {
+        width: 33.3px;
+        height: 4.5px;
+    }
+
+    .menu {
+        height: 100vh;
+    }
+
+    .close-btn {
+        height: 100px;
+    }
+
+    .close-btn span {
+        width: 36px;
+        height: 36px;
+    }
+    
+
+    .close-btn span::before,.close-btn span::after {
+        width: 2px;
+        height: 24px;
+    }
+
+    /*trs-headline*/
+    .mainpage-top {
+        height: 70vh;
+    }
+
+    .trs {
+        margin-top: 0px;
+        width: 80%;
+        height: auto;
+        left: 25px;
+        bottom: 20px;
+        transform: none;
+    }
+
+    .top-img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .trust-img {
+        width: calc(70% - 20px);
+        max-width: calc(40% - 20px);
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .responsibility-img {
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .service-img {
+        width: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        height: auto;
+        margin-left: 0px;
+    }
+
+    /* ボタン */
+    .btn-frame {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .btn-link{
+        width: 90%;
+        height: 70px;
+        margin: 0px 0px;
+        z-index: 2;
+    }
+
+    .btn-text1 {
+        margin-left: 50px;
+    }
+
+    .btn-text2 {
+         width: 50px;
+        height: 50px;
+    }
+
+    /*about*/
+    .about {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 50px 0px;
+    }
+    
+    .building-img {
+        width: 90%;
+    }
+
+    .about div {
+        width: 90%;
+    }
+    .about-description {
+        font-size: 18px;
+    } 
+
+    /* 画像縦配置 */
+    .trs-band { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 0px;
+        margin: 0;
+        z-index: 0;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+    }
+    
+    .band-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*summary*/
+    .summary {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    /*contact*/
+    .text-title {
+        font-size: 40px;
+    }
+
+    .title-sub {
+        font-size: 18px;
+    }
+
+    .form-buttons button {
+        font-size: 18px;
+    }
+
+    /*問い合わせページボタン縦配置*/
+    .contact-img {
+        height: 100%;
+    }
+
+    .contact-title {
+        font-size: 48px;
+    }
+
+    .contact-text {
+        font-size: 20px;
+    }
+
+    .form-buttons {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+
+    #form-personal,#form-corporate {
+        margin-top: 30px;
+    }
+
+    /*footer*/
+    footer,.list-footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        padding: 0px 0px;
+        height: auto;
+    }
+    .logo-img {
+        width: 130px;
+        height: auto;
+        display: block;
+        margin-left: 30px;
+  }
+
+    /* ボタン */
+    .btn-frame {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .btn-link{
+        width: 90%;
+        height: 50px;
+        margin: 0px 0px;
+        z-index: 2;
+    }
+
+    .btn-text1 {
+        margin-left: 30px;
+        font-size: 18px;
+    }
+
+    .btn-text2 {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;        
+    }
+
+    /*about*/
+    .about {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px 0px;
+        width: 100%;
+    }
+
+    .building-img {
+        width: 90%;
+    }
+
+    .about div {
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin: 30px 0px 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .about-img {
+        margin-right: auto;
+        top: 0px;
+        left: 0px;
+        width: 50%;
+        max-width: 160px;
+    }
+
+    /*box*/
+    .box-text p {
+        font-size: 24px;
+        white-space: normal;
+    }
+
+    .summary-text {
+        width: auto;
+        margin: 0 auto;
+    }
+
+
+    /*contact遷移*/
+    .contact-img {
+        height: 100%;
+    }
+    .contact-title {
+        word-break: break-all;
+    }
+    .contact-text {
+        font-size: 16px;
+        width: 90%;
+        height: 100%;
+    }
+
+    .form-buttons1 div a {
+        font-size: 16px;
+        padding: 50px 0px;
+    }
+}

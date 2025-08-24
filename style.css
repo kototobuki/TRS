@@ -99,6 +99,7 @@ footer img {
  /*Contactフォーム誘導*/
 .contact-section {
     position: relative;
+    display: flex;
     background-color: #000;
     align-content: center;
     justify-content: center;
@@ -151,7 +152,7 @@ footer img {
  .form-buttons1 div {
     color: #ffffff;
     border: 2px solid #ffffff;
-    width: auto;
+    width: 100%;
     height: auto;
     margin-top: 10px;
     /* white-space: nowrap; */
